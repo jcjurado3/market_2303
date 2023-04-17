@@ -2,6 +2,7 @@ require 'rspec'
 require './lib/item'
 require './lib/vendor'
 require './lib/market'
+require 'date'
 
 RSpec.describe Market do
   describe '#initialize' do
@@ -151,6 +152,14 @@ RSpec.describe Market do
       market.add_vendor(vendor2)
       market.add_vendor(vendor3)
       expect(market.overstocked_items).to eq([item1])
+    end
+  end
+
+  describe '#date' do
+    it 'has a date attribute' do
+      market = Market.new("South Pearl Street Farmers Market")
+      expect(market.date).to eq("2023-04-17")
+      expect(market.date).to be_a_kind_of(String)
     end
   end
 end
