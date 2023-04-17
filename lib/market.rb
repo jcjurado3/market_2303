@@ -41,6 +41,7 @@ class Market
       end
     end
     inventory_hash
+
   end
 
   def overstocked_items
