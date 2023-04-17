@@ -4,7 +4,7 @@ class Market
   def initialize(name)
     @name = name
     @vendors = []
-    @date = Date.today.to_s
+    @date = Date.today.strftime("%d/%m/%Y")
   end
 
   def add_vendor(vendor)

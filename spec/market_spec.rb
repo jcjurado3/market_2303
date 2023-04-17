@@ -158,7 +158,7 @@ RSpec.describe Market do
   describe '#date' do
     it 'has a date attribute' do
       market = Market.new("South Pearl Street Farmers Market")
-      expect(market.date).to eq("2023-04-17")
+      expect(market.date).to eq("17/04/2023")
       expect(market.date).to be_a_kind_of(String)
     end
   end
